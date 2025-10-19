@@ -39,18 +39,20 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(12),
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset(
+                          'assets/images/logo.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    child: const Icon(
-                      Icons.dashboard,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ),
                   
                   const Text(
                     'Mi Dashboard',
@@ -68,6 +70,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+               const Divider(
+                color: Colors.grey,
+                thickness: 1,
+                height: 24,
+              ),
+
+            const SizedBox(height: 24),
               
               const SizedBox(height: 24),
               
@@ -112,7 +121,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            '1,234',
+                            '5,120',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -162,7 +171,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            '567',
+                            '1,098',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -212,7 +221,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            '\$89K',
+                            '\$389K',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -248,7 +257,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'Actividad Reciente',
+                          'Últimas actividades',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -299,7 +308,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'Estadísticas del Mes',
+                          'Resumen mensual',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -310,13 +319,13 @@ class HomeScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            _buildStatItem('Crecimiento', '+25%', Colors.green),
+                            _buildStatItem('Crecimiento', '+48%', Colors.green),
                             Container(
                               width: 1,
                               height: 40,
                               color: Colors.grey.shade300,
                             ),
-                            _buildStatItem('Conversión', '12.5%', Colors.blue),
+                            _buildStatItem('Ventas', '35.5%', Colors.purple),
                             Container(
                               width: 1,
                               height: 40,
